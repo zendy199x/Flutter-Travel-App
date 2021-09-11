@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:travel/constants.dart';
+import 'package:travel/enum.dart';
 import 'package:travel/screens/events/events_screen.dart';
+import 'package:travel/screens/friends/friends_screen.dart';
+import 'package:travel/screens/home/home_screen.dart';
 import 'package:travel/size_config.dart';
 
 class CustomNavBar extends StatelessWidget {
   const CustomNavBar({
     Key? key,
+    required this.selectedMenu,
   }) : super(key: key);
+
+  final MenuState selectedMenu;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +30,7 @@ class CustomNavBar extends StatelessWidget {
               NavItem(
                 icon: "assets/icons/calendar.svg",
                 title: "Events",
+                isActive: MenuState.events == selectedMenu,
                 press: () {
                   Navigator.push(
                     context,
@@ -34,13 +41,28 @@ class CustomNavBar extends StatelessWidget {
               NavItem(
                 icon: "assets/icons/chat.svg",
                 title: "Chat",
-                isActive: true,
-                press: () {},
+                isActive: MenuState.chat == selectedMenu,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ),
+                  );
+                },
               ),
               NavItem(
                 icon: "assets/icons/friendship.svg",
                 title: "Friends",
-                press: () {},
+                isActive: MenuState.friends == selectedMenu,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FriendsScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
