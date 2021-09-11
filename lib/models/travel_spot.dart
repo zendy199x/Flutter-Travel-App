@@ -18,19 +18,19 @@ List<TravelSpot> travelSpots = [
     users: users..shuffle(),
     name: "Red Mountains",
     image: "assets/images/Red_Mountains.png",
-    date: DateTime(2020, 10, 15),
+    date: DateTime(2021, 10, 15),
   ),
   TravelSpot(
     users: users..shuffle(),
     name: "Megical World",
     image: "assets/images/Magical_World.png",
-    date: DateTime(2020, 3, 10),
+    date: DateTime(2021, 3, 10),
   ),
   TravelSpot(
     users: users..shuffle(),
     name: "Red Mountains",
     image: "assets/images/Red_Mountains.png",
-    date: DateTime(2020, 10, 15),
+    date: DateTime(2021, 10, 15),
   ),
 ];
 
