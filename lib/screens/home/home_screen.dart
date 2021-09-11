@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel/constants.dart';
 import 'package:travel/screens/home/components/body.dart';
+import 'package:travel/screens/home/components/custom_navbar.dart';
 import 'package:travel/size_config.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,6 +13,7 @@ class HomeScreen extends StatelessWidget {
       extendBodyBehindAppBar: true,
       appBar: buildAppBar(),
       body: Body(),
+      bottomNavigationBar: CustomNavBar(),
     );
   }
 

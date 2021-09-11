@@ -18,6 +18,7 @@ class Body extends StatelessWidget {
           PopularPlaces(),
           VerticalSpacing(),
           TopTravelers(),
+          VerticalSpacing(),
         ],
       ),
     );
