@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel/screens/home/components/home_header.dart';
+import 'package:travel/screens/home/components/popular_places.dart';
+import 'package:travel/size_config.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -11,6 +13,8 @@ class Body extends StatelessWidget {
       child: Column(
         children: [
           HomeHeader(),
+          VerticalSpacing(),
+          PopularPlaces(),
         ],
       ),
     );
